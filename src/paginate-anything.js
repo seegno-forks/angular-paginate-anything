@@ -311,7 +311,7 @@
 
 
   function parseRange(hdr) {
-    var m = hdr && hdr.match(/^(\d+)-(\d+)\/(\d+|\*)$/);
+    var m = hdr && hdr.replace('items ', '').match(/^(\d+)-(\d+)\/(\d+|\*)$/);
     if(m) {
       return {
         from: +m[1],
